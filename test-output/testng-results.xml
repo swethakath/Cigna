@@ -4,20 +4,42 @@
     <line>
       <![CDATA[chrome is opened]]>
     </line>
+    <line>
+      <![CDATA[https://www.cigna.com/ is entered]]>
+    </line>
+    <line>
+      <![CDATA[https://www.cigna.com/ is matched with https://www.cigna.com/]]>
+    </line>
+    <line>
+      <![CDATA[Cigna Official Site | Global Health Service Company is matched with Cigna Official Site | Global Health Service Company]]>
+    </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="218308" started-at="2021-05-14T02:39:44Z" finished-at="2021-05-14T02:43:23Z">
+  <suite name="Default suite" duration-ms="26959" started-at="2021-05-15T02:10:57Z" finished-at="2021-05-15T02:11:24Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="218308" started-at="2021-05-14T02:39:44Z" finished-at="2021-05-14T02:43:23Z">
+    <test name="Default test" duration-ms="26959" started-at="2021-05-15T02:10:57Z" finished-at="2021-05-15T02:11:24Z">
       <class name="com.cigna.testcases.TC001">
-        <test-method status="PASS" signature="tc001()[pri:0, instance:com.cigna.testcases.TC001@d1ad2e]" name="tc001" duration-ms="218232" started-at="2021-05-14T08:09:44Z" finished-at="2021-05-14T08:13:23Z">
+        <test-method status="PASS" signature="configuration()[pri:0, instance:com.cigna.testcases.TC001@1f3ddb1]" name="configuration" is-config="true" duration-ms="175" started-at="2021-05-15T07:40:56Z" finished-at="2021-05-15T07:40:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configuration -->
+        <test-method status="PASS" signature="tc001()[pri:0, instance:com.cigna.testcases.TC001@1f3ddb1]" name="tc001" duration-ms="26866" started-at="2021-05-15T07:40:57Z" finished-at="2021-05-15T07:41:24Z">
           <reporter-output>
             <line>
               <![CDATA[chrome is opened]]>
             </line>
+            <line>
+              <![CDATA[https://www.cigna.com/ is entered]]>
+            </line>
+            <line>
+              <![CDATA[https://www.cigna.com/ is matched with https://www.cigna.com/]]>
+            </line>
+            <line>
+              <![CDATA[Cigna Official Site | Global Health Service Company is matched with Cigna Official Site | Global Health Service Company]]>
+            </line>
           </reporter-output>
         </test-method> <!-- tc001 -->
       </class> <!-- com.cigna.testcases.TC001 -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

@@ -8,12 +8,14 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.cigna.commons.BusinessFunctions;
 import com.cigna.commons.Commons;
 import com.cigna.commons.OpenBrowser;
 
-public class TC001 extends Commons
+public class TC002 extends Commons
 {
 	OpenBrowser openBrowser = new OpenBrowser();
+	BusinessFunctions businessFunction = new BusinessFunctions();
 	WebDriver driver;
 	
 	@BeforeSuite
@@ -25,15 +27,12 @@ public class TC001 extends Commons
 	
 	@Parameters("browsername")
 	@Test
-	public void tc001(String browsername) throws Exception
+	public void tc002(String browsername) throws Exception
 	{
 		driver = openBrowser.browserOpen(driver, browsername);
 		System.out.println(prop.getProperty("Cigna_Prod_URL"));
 		navigateUrl(driver, prop.getProperty("Cigna_Prod_URL"));
-		currentURLValidation(driver, prop.getProperty("Cigna_Prod_URL"));
-		verifyTitle(driver, prop.getProperty("Cigna_Prod_Title"));
-		
-		//driver.get(prop.getProperty("Cigna_Prod_URL"));
+		businessFunction.headerValidation(driver,prop);		
 	}
 	
 	@AfterMethod

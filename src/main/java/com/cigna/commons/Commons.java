@@ -13,6 +13,11 @@ public class Commons
 	public FileInputStream fis;
 	public Properties prop;
 	
+	
+	public String headerCignaInternational = "(//ul[@data-ct-component='nav-universal-links'])[1]/li[1]/a";
+	public String headerContactUs = "(//ul[@data-ct-component='nav-universal-links'])[1]/li[2]/a";
+	public String headerEspanol = "(//ul[@data-ct-component='nav-universal-links'])[1]/li[3]/a";
+	
 	public void click(WebDriver driver,String xpathvalue,String text) throws Exception
 	{
 		try
@@ -55,6 +60,22 @@ public class Commons
 		}catch(Exception e)
 		{
 			Reporter.log(expectedTitle + "Title is not matched");
+			System.out.println(e.getMessage());
+		}
+	}
+	
+	public void verifyText(WebDriver driver,String xpathvalue,String expectedText)
+	{
+		try
+		{
+			String actualtext = driver.findElement(By.xpath(xpathvalue)).getText();
+			System.out.println(actualtext);
+			Assert.assertEquals(actualtext, expectedText);
+			Reporter.log(actualtext + " is matched with " + expectedText); 
+			
+		}catch(Exception e)
+		{
+			Reporter.log(expectedText + "Title is not matched");
 			System.out.println(e.getMessage());
 		}
 	}
